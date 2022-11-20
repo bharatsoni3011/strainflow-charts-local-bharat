@@ -21,8 +21,8 @@ import CasesLeftGraph from "./CasesLeftGraph";
 import Dropdown from "./Dropdown";
 
 const Cards = (country) => {
-  console.log(country);
-  const [month, selectMonth] = useState("Oct '21");
+  // console.log(country)
+  const [month, selectMonth] = useState(country.country !== "France" ? "Oct '21" : "Jul '22");
   let monthList = [];
   let history;
   for (const c of country.country) {
