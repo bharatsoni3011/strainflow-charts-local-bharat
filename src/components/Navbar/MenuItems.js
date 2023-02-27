@@ -14,6 +14,11 @@ const MenuItems = [
     to: "/paper",
     cName: "nav-link",
   },
+  {
+    title: "exBERT",
+    to: "/exbert",
+    cName: "nav-link",
+  },
 ];
 
 export default MenuItems;

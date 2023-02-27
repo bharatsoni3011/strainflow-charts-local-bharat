@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HashRouter, Route } from "react-router-dom";
 import { cloneDeep } from "lodash";
 
@@ -14,9 +14,17 @@ import countries from "./data/countries";
 // import countries_old from "./data/countries_old";
 import EntropyToggler from "./components/EntropyToggler";
 import entropies from "./data/entropies";
+import { ExBERT } from "./components/ExBERT/ExBERT";
 // console.log(entropies);
+// import html from './dist/exBERT.html';
+// import './dist/main.css'
 
 const lastUpdatedDate = "16-01-2023";
+const Apps = () => {
+  return (
+      <div/>
+  )
+}
 
 const App = () => {
   const [countrySelection, onCountrySelect] = useState("India");
@@ -80,6 +88,9 @@ const App = () => {
           </Route>
           <Route path="/paper" exact>
             <Paper />
+          </Route>
+          <Route path="/exbert" exact>
+            <ExBERT />
           </Route>
         </div>
         <Socials clicked={clicked} />
